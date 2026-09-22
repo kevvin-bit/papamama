@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Halaman Pertama</title>
+</head>
+<style>
+        body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, pink 40%, rgb(206, 129, 129) 55%, #f9d1d9 60%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    animation: fadeInPage 1.5s ease-in-out forwards;
+}
+
+@keyframes fadeInPage{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.title {
+    color: #ffff;
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+    font-family: monospace;
+    font-size: 24px;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid white;
+    width: 0;
+
+    animation: typing 3.5s steps(13) forwards, blink 0.75s infinite;
+}
+
+@keyframes typing{
+    from{width: 0;}
+    to{width: 100%;}
+}
+
+@keyframes blink{
+    from, to{border-color: transparent;}
+    50% {border-color: white;}
+}
+
+.card {
+    background-color: #d890a1;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+}
+
+
+.title {
+    color: #ffff;
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+    font-family: monospace;
+    font-size: 24px;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid white;
+    width: 0;
+}
+
+    .btn {
+    background-color: white;
+    color: #ff416c;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1rem;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.btn:hover {
+    background-color: #ff416c;
+    color: white;
+    transform: scale(1.05);
+}
+
+</style>
+<body>
+    <div class="card">
+    <h1 class="title">Ini Dari Kevvin</h1>
+    <a href="index2.html">
+        <button id="surpriseBtn" class="btn"><b>Coba Klik</b></button>
+    </a>
+    </div>
+</body>
+</html>
