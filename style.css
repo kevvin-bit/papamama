@@ -1,0 +1,219 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.title {
+    color: #ffff;
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+    font-family: monospace;
+    font-size: 24px;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid white;
+    width: 0;
+
+    animation: typing 3.5s steps(13) forwards, blink 0.75s infinite;
+}
+
+@keyframes typing{
+    from{width: 0;}
+    to{width: 100%;}
+}
+
+@keyframes blink{
+    from, to{border-color: transparent;}
+    50% {border-color: white;}
+}
+
+.cardhal1 {
+    background-color: #d890a1;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+}
+
+
+.title {
+    color: #ffff;
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+    font-family: monospace;
+    font-size: 24px;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid white;
+    width: 0;
+}
+
+    .btn {
+    background-color: white;
+    color: #ff416c;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1rem;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.btn:hover {
+    background-color: #ff416c;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* Kontainer Kartu */
+.card-wrapper {
+    perspective: 1000px;
+    z-index: 10;
+}
+
+.card {
+    width: 340px;
+    height: 480px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    cursor: pointer;
+}
+
+/* Ketika kartu dibuka (menggunakan class 'open') */
+.card.open {
+    transform: rotateY(180deg);
+}
+
+.card-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    text-align: center;
+}
+
+/* Tampilan Depan */
+.card-front {
+    background: #ffffff;
+    border: 3px solid #ff758c;
+}
+
+.card-front h1 {
+    font-family: 'Sacramento', cursive;
+    font-size: 3rem;
+    color: #ff477e;
+    margin-bottom: 15px;
+}
+
+.card-front p {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 25px;
+}
+
+/* Tampilan Belakang (Isi) */
+.card-back {
+    background: #fff0f3;
+    transform: rotateY(180deg);
+    border: 3px solid #ff758c;
+    justify-content: space-between;
+}
+
+.card-back h2 {
+    font-family: 'Sacramento', cursive;
+    font-size: 2.5rem;
+    color: #ff477e;
+    margin-top: 10px;
+}
+
+.message {
+    font-size: 0.85rem;
+    color: #444;
+    line-height: 1.6;
+    margin: 10px 0;
+    margin-bottom: 30px;
+    text-align: justify;
+}
+
+.back-content{
+    margin-bottom: 30px;
+}
+
+
+.signature {
+    font-weight: 600;
+    color: #ff477e;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+/* Tombol */
+button {
+    background: linear-gradient(to right, #ff758c, #ff7eb3);
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    font-size: 0.9rem;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(255, 117, 140, 0.4);
+    transition: transform 0.2s, background 0.2s;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+/* Efek Hati Jatuh di Background */
+.hearts-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.heart {
+    position: absolute;
+    color: rgba(255, 71, 126, 0.6);
+    font-size: 20px;
+    animation: fall linear forwards;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-10vh) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
